@@ -1,0 +1,22 @@
+{
+  "name": "fe-group-april23n",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.11",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-iconfont": "^5.0.1",
+    "postcss": "^8.4.16",
+    "underscore": "^1.8.3"
+  },
+  "author": "David",
+  "license": "ISC"
+}

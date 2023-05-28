@@ -1,0 +1,21 @@
+.btn {
+    display: inline-block;
+    border: 1px solid $tacao;
+    padding: 2px;
+    text-decoration: none;
+    min-width: 294px;
+    text-align: center;
+    letter-spacing: -0.7px;
+}
+
+.btn__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $tacao;
+    display: block;
+    background-color: $mondo;
+    padding: 18px 15px;
+    font-family: $font-secondary;
+}
