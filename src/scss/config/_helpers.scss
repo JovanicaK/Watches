@@ -5,6 +5,17 @@
     padding: 0 20px;
 }
 
+.overlay {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 %bg-img {
     background-position: center;
     background-size: cover;

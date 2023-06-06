@@ -32,35 +32,42 @@ function navScroll(wSize) {
 }
 
 function slider() {
-    var config = {
-        // Optional parameters
+  var init = false;
+  var swiper;
+  function swiperCard() {
+  if (window.innerWidth <= 1025) {
+    if (!init) {
+      init = true;
+      swiper = new Swiper(".swiper-js", {
+        direction: "horizontal",
+        slidesPerView: "auto",
+        centeredSlides: true,
         loop: true,
-
-        // If we need pagination
+        spaceBetween: 0,
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
+          clickable: true,
         },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+      });
     }
-    var swiper = new Swiper('.js-swiper', config);
+  } else if (init) {
+    swiper.destroy (".swiper-js", {
+      direction: 'vertical' ,
+    })
+  };
+    init = false;
+      
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
 }
 
 function equalHeight() {
-    $('.js-title').matchHeight();
-}
-
-function dropdown() {
-    $('select').selectric();
+  $('.js-item').matchHeight();
 }
 
 activeNavLink();
 navigation();
 navScroll(768);
+slider();
 equalHeight();
-dropdown();
-// slider();

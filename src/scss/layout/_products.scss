@@ -1,42 +1,111 @@
 .products {
+    @extend %bg-img;
     position: relative;
-    margin-bottom: 200px;
+    padding: 100px 0 118px;
+    .overlay {
+        &::after {
+            background-color: $bunker-dark;
+        }
+    }
+    .arrow-link {
+        right: 33px;
+        &::after {
+            width: 31px;
+            right: -3px;
+        }
+    }
+    .arrow {
+        right: -22px;
+    }
+    @include breakpoint (tablet) {
+        padding: 80px 0;
+    }
+    @include breakpoint (phone) {
+        padding: 30px 0;
+    }
 }
 
 .products__row {
     display: flex;
     flex-wrap: wrap;
-}
-
-.products__col {
-    flex: 1 1 33.33%;
-    max-width: 33.33%;
+    justify-content: space-between;
     position: relative;
+    margin: 0 -15px;
     overflow: hidden;
-    border: 1px solid #000;
+    z-index: 2;
+    @include breakpoint (tablet) {
+        display: block;
+        margin: -10px;
+    }
+    @include breakpoint (phone) {
+        display: block;
+        margin: -5px 0;
+    }
 }
-
-.products__content {
-    padding: 20px;
-    background-color: $tacao;
+.products__row--top {
+    margin-left: -120px;
+    @include breakpoint (tablet) {
+        margin-left: 0;
+    }
+    @include breakpoint (phone) {
+        margin-left: 0;
+    }
 }
 
 .products__title {
-    font-size: 30px;
-    line-height: 34px;
-    color: $charcoal;
-    text-align: center;
-    display: block;
+    margin-bottom: 50px;
+    .horizontal-line {
+        background-color: $white;
+        z-index: 3;
+    }
+    .h2 {
+        color: $white;
+    }
+    @include breakpoint (tablet) {
+        // margin-left: 15px;
+        margin-bottom: 40px;
+    }
+    @include breakpoint (phone) {
+        // margin-left: 5px;
+        margin-bottom: 30px;
+    }
+}
+
+.products__link {
+    color: $white;
+    position: absolute;
+    top: 23px;
+    right: 20px;
+}
+
+.products__link--hidden {
+    @include breakpoint (phone) {
+        display: none;
+    }
+}
+
+.products__col {
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding: 0 15px;
+    @include breakpoint (tablet) {
+        flex: none;
+        max-width: 100%;
+        padding: 10px;
+    }
+    @include breakpoint (phone) {
+        flex: none;
+        max-width: 100%;
+        padding: 5px 0;
+    }
 }
 
 .products__img-wrap {
     position: relative;
     padding-bottom: 100%;
-    // padding-bottom: 153.31%;
 }
 
 .products__img {
-    // @extend %bg-img;
     position: absolute;
     top: 0;
     left: 0;
@@ -45,3 +114,180 @@
     object-fit: cover;
     object-position: center;
 }
+
+.products__price {
+    display: block;
+    background-color: $bunker;
+    color: $white;
+    padding: 12px 25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    letter-spacing: 3px;
+    font-family: $font-primary;
+    text-align: center;
+    font-weight: 700;
+    @include breakpoint (phone) {
+        padding: 20px 14px;
+    }
+}
+
+.products__price--l {
+    font-size: 28px;
+    line-height: 68px;
+    @include breakpoint (phone) {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.products__price--s {
+    font-size: 20px;
+    line-height: 40px;
+    padding: 14px 17px;
+    letter-spacing: 2px;
+    @include breakpoint (phone) {
+        font-size: 12px;
+        line-height: 23px;
+        padding: 8px;
+    }
+}
+
+.products__content {
+    padding: 35px 55px 40px;
+    background-color: $old-lace;
+    text-align: center;
+    @include breakpoint (tablet) {
+        padding: 30px 20px;
+    }
+    @include breakpoint (phone) {
+        text-align: left;
+        padding: 25px 18px;
+    }
+}
+
+.products__name {
+    display: block;
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 600;
+    color: $bunker;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+    @include breakpoint (tablet) {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    @include breakpoint (phone) {
+        font-size: 24px;
+        line-height: 18px;
+    }
+}
+.products__text {
+    font-size: 20px;
+    line-height: 38px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    color: $bunker-soft;
+    font-family: $font-secondary;
+    @include breakpoint (tablet) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    @include breakpoint (phone) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+.swiper-wrapper {
+    flex-direction: column;
+    @include breakpoint (tablet) {
+        flex-direction: row;
+    }
+    @include breakpoint (phone) {
+        flex-direction: row;
+    }
+}
+
+.swiper-pagination-bullets {
+    display: none;
+}
+
+.products__col--s {
+    margin: -15px 0;
+}
+
+.products__item--s {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    @include breakpoint (tablet) {
+        padding: 10px 0;
+    }
+}
+
+.products__img-wrap--s {
+    flex: 1 1 50%;
+    max-width: 278px;
+    padding-bottom: 47%;
+    .products__img {
+        object-fit: cover;
+    }
+    @include breakpoint (tablet) {
+        max-width: 50%;
+    }
+    @include breakpoint (phone) {
+        max-width: 50%;
+    }
+}
+
+.products__content--s {
+    flex: 1 1 50%;
+    max-width: 307px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 35px 28px 40px;
+    @include breakpoint (tablet) {
+        max-width: 50%;
+       justify-content: center;
+       align-items: center;
+    }
+    @include breakpoint (phone) {
+        max-width: 50%;
+        padding: 16px 12px;
+    }
+}
+
+.products__name--s {
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    // @include breakpoint (tablet) {
+    //     font-size: 18px;
+    //     line-height: 20px;
+    // }
+    @include breakpoint (phone) {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+.products__text--s {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 28px;
+    text-align: left;
+    @include breakpoint (tablet) {
+        text-align: center;
+    }
+    @include breakpoint (phone) {
+        font-size: 10px;
+        line-height: 15px;
+        padding: 11px 0;
+    }
+}
+

@@ -1,17 +1,26 @@
 .about-us {
     @extend %bg-img;
-    padding: 115px 0;
+    padding: 115px 0 111px;
+    position: relative;
     @include breakpoint(tablet) {
         padding: 80px 0;
     }
     @include breakpoint(phone) {
         padding: 35px 0;
+        .overlay {
+            &::after {
+                background-color: $silver;
+                opacity: 0.4;
+            }
+        }
     }
 }
 
 .about-us__row {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
     @include breakpoint(phone) {
         display: block;
         position: relative;
@@ -76,29 +85,12 @@
 }
 .about-us__title {
     color: $bunker;
-    letter-spacing: 3px;
-    position: relative;
-    margin-bottom: 36px;
-    @include breakpoint(phone) {
-        margin-bottom: 10px;
+    .horizontal-line {
+        background-color: $bunker;
+    }
+}
 
-    }
-}
-.horizontal-line {
-    display: inline-block;
-    height: 1px;
-    width: 100px;
-    background-color: $bunker;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    @include breakpoint(tablet) {
-        width: 80px;
-    }
-    @include breakpoint(phone) {
-        width: 50px;
-    }
-}
+
 .about-us__text-container {
     padding-left: 120px;
     color: $bunker;
@@ -117,7 +109,7 @@
         margin-bottom: 20px;
     }
 }
-.last {
+.about-us__text--hidden {
     @include breakpoint(phone) {
         display: none;
     }

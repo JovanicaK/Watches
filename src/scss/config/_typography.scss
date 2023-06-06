@@ -22,14 +22,27 @@ h2, .h2 {
     font-size: 50px;
     line-height: 60px;
     text-transform: capitalize;
-    padding-left: 120px;
+    padding-left: 18px;
     @include breakpoint(tablet) {
         font-size: 46px;
-        padding-left: 100px;
+        padding-left: 40px;
     }
     @include breakpoint(phone) {
         font-size: 36px;
-        padding-left: 70px;
+        padding-left: 20px;
+    }
+}
+
+.horizontal-line {
+    display: block;
+    height: 1px;
+    width: 100px;
+    margin-top: 28px;
+    @include breakpoint(tablet) {
+        width: 80px;
+    }
+    @include breakpoint(phone) {
+        width: 50px;
     }
 }
 
@@ -38,6 +51,17 @@ p, .text {
     font-size: 16px;
     line-height: 26px;
 }
+
+.section-title {
+    letter-spacing: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+    @include breakpoint(phone) {
+        margin-bottom: 10px;
+    }
+}
+
 
 // .. h6, .h6
 // p {}
