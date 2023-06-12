@@ -23,6 +23,18 @@
     @include breakpoint (phone) {
         padding: 30px 0;
     }
+    .swiper-wrapper {
+        flex-direction: column;
+        @include breakpoint (tablet) {
+            flex-direction: row;
+        }
+        @include breakpoint (phone) {
+            flex-direction: row;
+        }
+    }
+    .swiper-pagination-bullets {
+        display: none;
+    }
 }
 
 .products__row {
@@ -200,19 +212,7 @@
     }
 }
 
-.swiper-wrapper {
-    flex-direction: column;
-    @include breakpoint (tablet) {
-        flex-direction: row;
-    }
-    @include breakpoint (phone) {
-        flex-direction: row;
-    }
-}
 
-.swiper-pagination-bullets {
-    display: none;
-}
 
 .products__col--s {
     margin: -15px 0;

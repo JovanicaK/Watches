@@ -31,14 +31,14 @@ function navScroll(wSize) {
   })
 }
 
-function slider() {
+function productsSlider() {
   var init = false;
   var swiper;
   function swiperCard() {
   if (window.innerWidth <= 1025) {
     if (!init) {
       init = true;
-      swiper = new Swiper(".swiper-js", {
+      swiper = new Swiper(".productsSwiper-js", {
         direction: "horizontal",
         slidesPerView: "auto",
         centeredSlides: true,
@@ -66,8 +66,28 @@ function equalHeight() {
   $('.js-item').matchHeight();
 }
 
+function testimonialsSlider() {
+    var config = {
+      direction: 'horizontal',
+      spaceBetween: 40,
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.icon-arrow-right',
+          prevEl: '.icon-arrow-left',
+        },
+    }
+    var swiper = new Swiper('.testimonialsSwiper-js', config);
+
+}
+
 activeNavLink();
 navigation();
 navScroll(768);
-slider();
+productsSlider();
 equalHeight();
+testimonialsSlider();

@@ -3,8 +3,8 @@ iconfont Webfont
 */
 @font-face {
 	font-family: 'iconfont';
-	src: url('../fonts/iconfont.woff2?1686087363632') format('woff2'),
-		url('../fonts/iconfont.woff?1686087363632') format('woff');
+	src: url('../fonts/iconfont.woff2?1686219381262') format('woff2'),
+		url('../fonts/iconfont.woff?1686219381262') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -17,6 +17,7 @@ iconfont Webfont
 	line-height: 1;
 	font-weight: normal;
 	font-style: normal;
+	speak: none;
 	text-decoration: inherit;
 	font-size: inherit;
 	text-transform: none;
@@ -29,18 +30,26 @@ iconfont Webfont
 Glyphs list
 */
 
-.icon-arrow::before {
+.icon-arrow-left::before {
 	content: '\ea01';
 }
 
-.icon-car::before {
+.icon-arrow-right::before {
 	content: '\ea02';
 }
 
-.icon-facebook::before {
+.icon-arrow::before {
 	content: '\ea03';
 }
 
-.icon-marks::before {
+.icon-car::before {
 	content: '\ea04';
 }
+
+.icon-facebook::before {
+	content: '\ea05';
+}
+
+.icon-marks::before {
+	content: '\ea06';
+}
