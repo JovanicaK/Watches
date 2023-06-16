@@ -5,6 +5,7 @@
     overflow: hidden;
     .btn {
         margin-bottom: 15px;
+        min-width: 294px;
     }
     @include breakpoint(tablet) {
         position: relative;

@@ -1,0 +1,13 @@
+input,
+.input {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: $font-secondary;
+    display: block;
+    padding: 15px;
+    border: none;
+    @include breakpoint (phone) {
+        width: 100%;
+    }
+}

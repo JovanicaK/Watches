@@ -69,17 +69,30 @@ function equalHeight() {
 function testimonialsSlider() {
     var config = {
       direction: 'horizontal',
-      spaceBetween: 40,
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
+      slidesPerView: 1,
+      loop: true,
+      spaceBetween: 20,
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is >= 0px
+        0: {
+          slidesPerView: 1,
         },
+        // when window width is >= 767px
+        767: {
+          slidesPerView: 1,
+        },
+      },
+        // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
 
         // Navigation arrows
-        navigation: {
-          nextEl: '.icon-arrow-right',
-          prevEl: '.icon-arrow-left',
-        },
+      navigation: {
+        nextEl: '.icon-arrow-right',
+        prevEl: '.icon-arrow-left',
+      },
     }
     var swiper = new Swiper('.testimonialsSwiper-js', config);
 
