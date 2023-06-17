@@ -1,0 +1,30 @@
+.arrow {
+    color: $tacao;
+    font-size: 8.5px;
+    vertical-align: top;
+    letter-spacing: 0;
+    position: absolute;
+    top: 0;
+    right: -28px;
+}
+
+.arrow-prev, 
+.arrow-next {
+    display: block;
+    color: $tacao;
+    line-height: 10px;
+}
+
+.arrow-prev {
+    font-size: 36px;
+    margin-top: -7px;
+}
+
+.arrow-next {
+    font-size: 70px;
+    margin-top: -23px;
+    @include breakpoint (phone) {
+        font-size: 36px;
+        margin-top: 0px;
+    }
+}

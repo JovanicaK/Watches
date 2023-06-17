@@ -30,11 +30,7 @@
 }
 
 .testimonials__row {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(wrap,row-reverse,space-between,center);
     padding: 25px 200px;
     @include breakpoint (phone) {
         flex-direction: column;
@@ -90,10 +86,7 @@
 }
 
 .testimonials__address {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
+    @include flex(wrap,row,flex-end,center);
     font-family: $font-secondary;
     font-weight: 400;
     font-size: 16px;
@@ -112,10 +105,10 @@
         }
     }
     @include breakpoint (phone) {
-        justify-content: center;
-        flex-direction: row-reverse;
+        @include flex(wrap,row-reverse,center,center);
     }
 }
+
 .testimonials__img-wrap {
     max-width: 282px;
     position: relative;
@@ -126,35 +119,9 @@
 }
 
 .testimonials__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: cover;
+    @include image(cover);
 }
+
 .testimonialsSwiper-js {
     position: relative;
 }
-
-
-.arrow-prev, 
-.arrow-next {
-    display: block;
-    color: $tacao;
-    line-height: 10px;
-}
-.arrow-prev {
-    font-size: 36px;
-    margin-top: -7px;
-}
-.arrow-next {
-    font-size: 70px;
-    margin-top: -23px;
-    @include breakpoint (phone) {
-        font-size: 36px;
-        margin-top: 0px;
-    }
-}
-

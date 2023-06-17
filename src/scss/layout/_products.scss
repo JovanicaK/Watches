@@ -38,9 +38,7 @@
 }
 
 .products__row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include flex(wrap,row,space-between,flex-start);
     position: relative;
     margin: 0 -15px;
     overflow: hidden;
@@ -54,6 +52,7 @@
         margin: -5px 0;
     }
 }
+
 .products__row--top {
     margin-left: -120px;
     @include breakpoint (tablet) {
@@ -118,13 +117,7 @@
 }
 
 .products__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    @include image(cover);
 }
 
 .products__price {
@@ -195,6 +188,7 @@
         line-height: 18px;
     }
 }
+
 .products__text {
     font-size: 20px;
     line-height: 38px;
@@ -212,15 +206,12 @@
     }
 }
 
-
-
 .products__col--s {
     margin: -15px 0;
 }
 
 .products__item--s {
-    display: flex;
-    flex-wrap: wrap;
+    @include flex(wrap,row,flex-start,flex-start);
     padding: 15px 0;
     @include breakpoint (tablet) {
         padding: 10px 0;
@@ -245,15 +236,11 @@
 .products__content--s {
     flex: 1 1 50%;
     max-width: 307px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    @include flex(nowrap,column,center,flex-start);
     padding: 35px 28px 40px;
     @include breakpoint (tablet) {
         max-width: 50%;
-       justify-content: center;
-       align-items: center;
+        align-items: center;
     }
     @include breakpoint (phone) {
         max-width: 50%;
@@ -266,10 +253,6 @@
     line-height: 34px;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    // @include breakpoint (tablet) {
-    //     font-size: 18px;
-    //     line-height: 20px;
-    // }
     @include breakpoint (phone) {
         font-size: 14px;
         line-height: 14px;
@@ -290,4 +273,3 @@
         padding: 11px 0;
     }
 }
-
