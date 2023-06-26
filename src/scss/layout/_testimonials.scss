@@ -2,9 +2,9 @@
     @extend %bg-img;
     padding: 103px 0 133px;
     position: relative;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         padding: 30px 0;
-        .overlay {
+       .bg-layer {
             &::after {
                 background-color: $silver;
                 opacity: 0.4;
@@ -19,11 +19,11 @@
     .horizontal-line {
         background-color: $bunker;
     }
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         margin-left: 0;
         justify-content: center;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         margin-left: 0;
         justify-content: flex-start;
     }
@@ -32,7 +32,7 @@
 .testimonials__row {
     @include flex(wrap,row-reverse,space-between,center);
     padding: 25px 200px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         flex-direction: column;
         padding: 20px 0;
     }
@@ -41,7 +41,7 @@
 .testimonials__col {
     flex: 1 1 35%;
     max-width: 35%;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         flex: 1 1 50%;
         max-width: 100%;
     }
@@ -50,7 +50,7 @@
 .testimonials__col--wide {
     flex: 1 1 65%;
     max-width: 65%;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         flex: 1 1 50%;
         max-width: 100%;
     }
@@ -58,7 +58,7 @@
 
 .testimonials__content {
     padding: 0 30px 0 6px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         padding: 10px 0;
     }
 }
@@ -68,7 +68,7 @@
     font-size: 45px;
     line-height: 94px;
     margin-top: -50px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         font-size: 23px;
         line-height: 53px;
     }
@@ -76,10 +76,10 @@
 
 .testimonials__text {
     text-align: right;
-    color: $bunker-soft;
+    color: $bunker-70;
     margin-bottom: 18px;
     letter-spacing: 0.5px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         text-align: center;
         margin-bottom: 10px;
     }
@@ -99,12 +99,12 @@
         height: 14px;
         margin-left: 7px;
         background-color: $bunker;
-        @include breakpoint (phone) {
+        @include breakpoint(phone) {
             margin-left: 0;
             margin-right: 10px;
         }
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         @include flex(wrap,row-reverse,center,center);
     }
 }
@@ -113,7 +113,7 @@
     max-width: 282px;
     position: relative;
     padding-bottom: 100%;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         min-width: 150px;
     }
 }
@@ -124,4 +124,8 @@
 
 .testimonialsSwiper-js {
     position: relative;
+    .swiper-slide {
+        padding: 0;
+    }
 }
+

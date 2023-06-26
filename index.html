@@ -11,35 +11,33 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__top"></div>
-            <div class="header__bottom" style="background-image: url('images/header-background.jpg');">
-                <a class="header__logo logo" href="javascript:;" style="background-image: url('images/big-ben-logo.png');">
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a class="nav__link link nav__link--active" href="javascript:;">Home</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="javascript:;">About us</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="javascript:;">New arrivals</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="javascript:;">Testimonials</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link link" href="javascript:;">Contact
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <button class="toggle" type="button">
-                    <span class="toggle__line"></span>
-                </button>
-            </div>
+    <header class="header" style="background-image: url('images/header-background.jpg');">
+        <a class="header__logo" href="javascript:;">
+            <img src="images/big-ben-logo.png" alt="logo" class="header__logo-img">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link link nav__link--active" href="javascript:;">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link link" href="javascript:;">About us</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link link" href="javascript:;">New arrivals</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link link" href="javascript:;">Testimonials</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link link" href="javascript:;">Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <button class="toggle" type="button">
+            <span class="toggle__line"></span>
+        </button>
     </header>
     <section class="banner">
         <div class="wrapper">
@@ -54,7 +52,7 @@
         </div>
     </section>
     <section class="about-us" style="background-image: url('images/about-us-background.jpg');">
-        <div class="overlay">
+        <div class="bg-layer">
             <div class="wrapper">
                 <div class="about-us__row">
                     <div class="about-us__col">
@@ -72,11 +70,11 @@
                             <p class="about-us__text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                             <p class="about-us__text">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
                             <p class="about-us__text about-us__text--hidden">The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                            <a class="about-us__link arrow-link" href="javascript:;">
+                                Read more  
+                                <span class="icon-arrow arrow"></span>
+                            </a>
                         </div>
-                        <a class="about-us__link arrow-link" href="javascript:;">
-                            Read more  
-                            <span class="icon-arrow arrow"></span>
-                        </a>
                     </div>
                     <div class="about-us__img-container">
                         <img src="images/about-us2.jpg" alt="watch2" class="about-us__img about-us__img--3">
@@ -86,7 +84,7 @@
         </div>
     </section>
     <section class="products" style="background-image: url('images/products-background.jpg');">
-        <div class="overlay">
+        <div class="bg-layer">
             <div class="wrapper">
                 <div class="products__row products__row--top">
                     <div class="section-title products__title">
@@ -120,14 +118,14 @@
                             <div class="swiper-wrapper">
                               <!-- Slides -->
                               <div class="swiper-slide">
-                                <div class="products__item products__item--s js-item">
-                                    <div class="products__img-wrap products__img-wrap--s">
+                                <div class="products__item products__item--s">
+                                    <div class="products__img-wrap products__img-wrap--s js-item">
                                         <img src="images/product2.jpg" alt="img" class="products__img">
                                         <span class="products__price products__price--s">
                                             $4.420
                                         </span>
                                     </div>
-                                    <div class="products__content products__content--s">
+                                    <div class="products__content products__content--s js-item">
                                         <span class="products__name products__name--s">Patek Philippe</span>
                                         <p class="products__text products__text--s">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                         <a class="card-link card-link--s" href="javascript:;">View details</a>
@@ -135,14 +133,14 @@
                                 </div>
                               </div>
                               <div class="swiper-slide">
-                                <div class="products__item products__item--s js-item">
-                                    <div class="products__img-wrap products__img-wrap--s">
+                                <div class="products__item products__item--s">
+                                    <div class="products__img-wrap products__img-wrap--s js-item">
                                         <img src="images/product3.jpg" alt="img" class="products__img">
                                         <span class="products__price products__price--s">
                                             $2.380
                                         </span>
                                     </div>
-                                    <div class="products__content products__content--s">
+                                    <div class="products__content products__content--s js-item">
                                         <span class="products__name products__name--s">Omega De Ville</span>
                                         <p class="products__text products__text--s">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middl...</p>
                                         <a class="card-link card-link--s" href="javascript:;">View details</a>
@@ -150,14 +148,14 @@
                                 </div>
                               </div>
                               <div class="swiper-slide">
-                                <div class="products__item products__item--s js-item">
-                                    <div class="products__img-wrap products__img-wrap--s">
+                                <div class="products__item products__item--s">
+                                    <div class="products__img-wrap products__img-wrap--s js-item">
                                         <img src="images/product4.jpg" alt="img" class="products__img">
                                         <span class="products__price products__price--s">
                                             $5.190
                                         </span>
                                     </div>
-                                    <div class="products__content products__content--s">
+                                    <div class="products__content products__content--s js-item">
                                         <span class="products__name products__name--s">Breitling Montbrill...</span>
                                         <p class="products__text products__text--s">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.</p>
                                         <a class="card-link card-link--s" href="javascript:;">View details</a>
@@ -172,7 +170,7 @@
         </div>
     </section>
     <section class="testimonials" style="background-image: url('images/testimonial-bg.jpg');">
-        <div class="overlay">
+        <div class="bg-layer">
             <div class="wrapper">
                 <div class="section-title testimonials__title">
                     <span class="horizontal-line"></span>
@@ -262,10 +260,12 @@
                 <a class="footer__logo" href="javascript:;">
                     <img class="footer__logo-img" src="images/big-ben-logo-light.png" alt="footer-logo">
                 </a>
-                <a class="footer__number link" href="tel:+1 96 541231547">+1 96 541231547</a>
-                <address class="footer__address link">
+                <div class="footer__contact">
+                    <a class="footer__number link" href="tel:+1-96-541231547">+1 96 541231547</a>
+                    <address class="footer__address link">
                     24 Washington Lane, Chicago, IL
-                </address>
+                    </address>
+                </div>
             </div>
             <div class="footer__bot">
                 <nav class="nav">
@@ -288,14 +288,14 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="footer__subscribe">
-                    <input type="text" class="footer__inp" placeholder="Mike Rodgers"><br>
-                    <input type="email" class="footer__inp" placeholder="miker@gm"><br>
+                <form class="footer__form" action="javascript:;">
+                    <input type="text" class="footer__inp" placeholder="Mike Rodgers">
+                    <input type="email" class="footer__inp" placeholder="miker@gm">
                     <textarea class="footer__inp input footer__textarea" rows="1" placeholder="Write your message"></textarea>
                     <button class="footer__btn btn" type="submit">
                         <span class="btn__text">Send</span>
                     </button>
-                </div>
+                </form>
                 <div class="footer__rights">
                     <small class="footer__small small-text">All rights reserved &copy; Big Ben 2020
                     </small>

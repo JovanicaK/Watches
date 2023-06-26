@@ -1,55 +1,50 @@
-.header__top {
-    background-color: $bunker;
-    height: 20px;
-    @include breakpoint (tablet) {
-        display: none;
-    }
-    @include breakpoint (phone) {
-        display: none;
-    }
-}
-
-.header__bottom {
+.header {
     @extend %bg-img;
+    border-top: 20px solid $bunker;
     @include flex(wrap,column,flex-start,unset);
     position: relative;
     @include breakpoint(phone) {
         @include flex(wrap,row,space-between,center);
+        border: none;
     }
 }
 
 .header__logo {
-    @extend %logo;
     display: block;
-    position: relative;
+    position: relative; 
+    background-color: transparent;
     width: 131px;
-    top: -22px;
+    height: 89px;
     left: 50%;
     transform: translateX(-50%);
-    padding-bottom: 9.1%; 
-    overflow: hidden;
-    @include breakpoint (tablet) {
-        top: 0;
+    @include breakpoint(tablet) {
+        width: 100px;
+        padding-top: 20px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         width: 67px;
-        padding-bottom: 9.9%;
-        top: 0;
+        height: 55px;
         left: 20px;
         transform: none;
     }
 }
 
+.header__logo-img {
+    @include image(cover); 
+}
+
 .nav {
-    margin-top: -50px;
+    margin-top: -6px;
     overflow: hidden;
-    padding: 23px 0 27px;
-    border-top: 1px solid $bunker-extra-light;
-    @include breakpoint (tablet) {
-        margin-top: -12px;
+    padding: 20px 0 27px;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid $bunker-10;
+    @include breakpoint(tablet) {
+        margin-top: 0;
         padding: 20px 0;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         display: none;
         position: absolute;
         z-index: 3;
@@ -66,22 +61,22 @@
 .nav__list {
     @include flex(wrap,row,center,center);
     margin: 0 -35px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         display: block;
     }
 }
 
 .nav__item {
     padding: 0 35px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         margin: 0 0 10px;
     }
 }
 
 .nav__link {
     display: block;
-    color: $bunker-light;
-    @include breakpoint (phone) {
+    color: $bunker-50;
+    @include breakpoint(phone) {
         display: inline-block;
         padding: 10px 0;
     }
@@ -94,7 +89,7 @@
 
 .toggle {
     display: none;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         display: block;
         width: 18px;
         height: 12px;

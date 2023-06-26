@@ -68,10 +68,9 @@ function equalHeight() {
 
 function testimonialsSlider() {
     var config = {
-      direction: 'horizontal',
-      slidesPerView: 1,
-      loop: true,
+      // loop: true,
       spaceBetween: 20,
+      initialSlide: 3,
       // Responsive breakpoints
       breakpoints: {
         // when window width is >= 0px
@@ -95,6 +94,7 @@ function testimonialsSlider() {
       },
     }
     var swiper = new Swiper('.testimonialsSwiper-js', config);
+    // window.addEventListener("resize", Swiper);
 
 }
 

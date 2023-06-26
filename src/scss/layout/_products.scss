@@ -2,9 +2,9 @@
     @extend %bg-img;
     position: relative;
     padding: 100px 0 118px;
-    .overlay {
+    .bg-layer {
         &::after {
-            background-color: $bunker-dark;
+            background-color: $bunker-95;
         }
     }
     .arrow-link {
@@ -17,18 +17,18 @@
     .arrow {
         right: -22px;
     }
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         padding: 80px 0;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         padding: 30px 0;
     }
     .swiper-wrapper {
         flex-direction: column;
-        @include breakpoint (tablet) {
+        @include breakpoint(tablet) {
             flex-direction: row;
         }
-        @include breakpoint (phone) {
+        @include breakpoint(phone) {
             flex-direction: row;
         }
     }
@@ -43,11 +43,11 @@
     margin: 0 -15px;
     overflow: hidden;
     z-index: 2;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         display: block;
         margin: -10px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         display: block;
         margin: -5px 0;
     }
@@ -55,10 +55,10 @@
 
 .products__row--top {
     margin-left: -120px;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         margin-left: 0;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         margin-left: 0;
     }
 }
@@ -72,11 +72,11 @@
     .h2 {
         color: $white;
     }
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         // margin-left: 15px;
         margin-bottom: 40px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         // margin-left: 5px;
         margin-bottom: 30px;
     }
@@ -90,7 +90,7 @@
 }
 
 .products__link--hidden {
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         display: none;
     }
 }
@@ -99,12 +99,12 @@
     flex: 1 1 50%;
     max-width: 50%;
     padding: 0 15px;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         flex: none;
         max-width: 100%;
         padding: 10px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         flex: none;
         max-width: 100%;
         padding: 5px 0;
@@ -132,7 +132,7 @@
     font-family: $font-primary;
     text-align: center;
     font-weight: 700;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         padding: 20px 14px;
     }
 }
@@ -140,7 +140,7 @@
 .products__price--l {
     font-size: 28px;
     line-height: 68px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         font-size: 18px;
         line-height: 18px;
     }
@@ -149,9 +149,9 @@
 .products__price--s {
     font-size: 20px;
     line-height: 40px;
-    padding: 14px 17px;
+    padding: 13px 17px;
     letter-spacing: 2px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         font-size: 12px;
         line-height: 23px;
         padding: 8px;
@@ -162,10 +162,10 @@
     padding: 35px 55px 40px;
     background-color: $old-lace;
     text-align: center;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         padding: 30px 20px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         text-align: left;
         padding: 25px 18px;
     }
@@ -179,11 +179,11 @@
     color: $bunker;
     letter-spacing: 2px;
     margin-bottom: 32px;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         font-size: 30px;
         line-height: 40px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         font-size: 24px;
         line-height: 18px;
     }
@@ -194,13 +194,13 @@
     line-height: 38px;
     font-weight: 400;
     margin-bottom: 18px;
-    color: $bunker-soft;
+    color: $bunker-70;
     font-family: $font-secondary;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         font-size: 18px;
         line-height: 28px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         font-size: 16px;
         line-height: 26px;
     }
@@ -210,41 +210,49 @@
     margin: -15px 0;
 }
 
+.swiper-slide {
+    padding: 15px 0;
+}
+
 .products__item--s {
     @include flex(wrap,row,flex-start,flex-start);
-    padding: 15px 0;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         padding: 10px 0;
     }
 }
 
 .products__img-wrap--s {
-    flex: 1 1 50%;
-    max-width: 278px;
-    padding-bottom: 47%;
+    flex: 1 1 47.5%;
+    max-width: 47.5%;
+    padding-bottom: 0;
+    max-height: 47.5%;
     .products__img {
         object-fit: cover;
     }
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
+        flex: 1 1 50%;
         max-width: 50%;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
+        flex: 1 1 50%;
         max-width: 50%;
     }
 }
 
 .products__content--s {
-    flex: 1 1 50%;
-    max-width: 307px;
+    flex: 1 1 52.5%;
+    max-width: 52.5%;
     @include flex(nowrap,column,center,flex-start);
     padding: 35px 28px 40px;
-    @include breakpoint (tablet) {
-        max-width: 50%;
+    @include breakpoint(tablet) {
         align-items: center;
-    }
-    @include breakpoint (phone) {
+        flex: 1 1 50%;
         max-width: 50%;
+    }
+    @include breakpoint(phone) {
         padding: 16px 12px;
+        flex: 1 1 50%;
+        max-width: 50%;
     }
 }
 
@@ -253,7 +261,7 @@
     line-height: 34px;
     letter-spacing: 1px;
     margin-bottom: 20px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         font-size: 14px;
         line-height: 14px;
     }
@@ -264,10 +272,10 @@
     line-height: 26px;
     margin-bottom: 28px;
     text-align: left;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         text-align: center;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         font-size: 10px;
         line-height: 15px;
         padding: 11px 0;

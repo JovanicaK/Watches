@@ -4,11 +4,11 @@
 
 .footer__top {
     @include flex(wrap,column,center,center);
-    padding-bottom: 44px;
-    @include breakpoint (tablet) {
+    padding: 32px 0 41px;
+    @include breakpoint(tablet) {
         padding-bottom: 30px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         padding-bottom: 20px;
     }
 }
@@ -17,19 +17,18 @@
     display: block;
     position: relative;
     width: 130px;
-    padding-bottom: 130px;
-    
-    @include breakpoint (phone) {
-        position: relative;
-    }
+    height: 130px;
 }
 
 .footer__logo-img {
     @include image(cover);
 }
 
+.footer__contact {
+    margin-top: -16px;
+    text-align: center;
+}
 .footer__number {
-    top: -20px;
     text-decoration: none;
     color: $polar;
     margin-bottom: 10px;
@@ -42,31 +41,32 @@
 
 .footer__bot {
     @include flex(wrap,column,center,unset);
-    border-top: 1px solid $light-white;
+    border-top: 1px solid $white-10;
     .nav {
         margin-top: 0;
+        padding: 25px 0;
     }
     .nav__item {
         padding: 0 15px;
     }
     .nav__link {
-        color: $whitish;
+        color: $white-50;
     }
     .nav__link--active {
         border-bottom: none;
     }
 }
 
-.footer__subscribe {
+.footer__form {
     padding: 20px 0 55px;
     @include flex(nowrap,row,space-between,center);
     margin: 0 -10px;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         flex-direction: column;
         margin: 0;
         padding: 10px 0 35px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         display: block;
         max-width: 100%;
         margin: 0;
@@ -82,17 +82,17 @@
     flex: 1 1 25%;
     max-width: 25%;
     margin: 0 10px;
-    background-color: $old-lace-dark;
+    background-color: $old-lace-5;
     &:focus,
     &:focus-visible {
         outline: $old-lace auto 1px;
     }
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         margin-bottom: 10px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         display: block;
-        margin: 0;
+        margin: 10px 0;
         max-width: 100%;
     }
 }
@@ -100,10 +100,10 @@
 .footer__textarea {
     flex: 1 1 38%;
     max-width: 38%;
-    @include breakpoint (tablet) {
+    @include breakpoint(tablet) {
         width: 25%;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         flex: none;
         max-width: 100%;
         margin-bottom: 20px;
@@ -122,7 +122,7 @@
         background-color: transparent;
         padding: 16px 15px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         margin: 0;
         max-width: 100%;
         width: 100%;
@@ -132,29 +132,29 @@
 .footer__rights {
     @include flex(wrap,row,center,center);
     margin-bottom: 30px;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         flex-direction: column-reverse;
     }
 }
 
 .footer__small {
-    color: $whitish;
+    color: $white-50;
 }
 
 .footer__link {
     display: inline-block;
     text-decoration: none;
-    color: $whitish;
+    color: $white-50;
     padding-left: 8px;
     margin-left: 8px;
-    border-left: 1px solid $whitish;
-    @include breakpoint (phone) {
+    border-left: 1px solid $white-50;
+    @include breakpoint(phone) {
         margin-bottom: 10px;
     }
 }
 
 .footer__link--invisibledash {
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         border-left: none;
         padding-left: 0;
         margin-left: 0;

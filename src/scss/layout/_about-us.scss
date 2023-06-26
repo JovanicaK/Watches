@@ -7,7 +7,7 @@
     }
     @include breakpoint(phone) {
         padding: 35px 0;
-        .overlay {
+        .bg-layer {
             &::after {
                 background-color: $silver;
                 opacity: 0.4;
@@ -38,7 +38,7 @@
 
 .about-us__img-container {
     position: relative;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         min-height: 308px;
     }
 }
@@ -51,7 +51,7 @@
 .about-us__img--1 {
     position: relative;
     width: 58%;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         position: absolute;
         top: 0;
         left: 0;
@@ -64,19 +64,21 @@
     position: absolute;
     top: 108px;
     right: 15px;
-    @include breakpoint (tablet) {
+    max-width: 340px;
+    max-height: 350px;
+    @include breakpoint(tablet) {
         top: 75px;
         right: 30px;
         width: 200px;
     }
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         display: none;
     }
 }
 
 .about-us__img--3 {
     display: none;
-    @include breakpoint (phone) {
+    @include breakpoint(phone) {
         display: block;
         position: relative;
         width: 100%;
@@ -94,7 +96,6 @@
 .about-us__text-container {
     padding-left: 120px;
     color: $bunker;
-    margin-bottom: 30px;
     @include breakpoint(tablet) {
         padding-left: 0;
     }
@@ -120,9 +121,6 @@
 .about-us__link {
     color: $bunker;
     letter-spacing: -2px;
-    padding-left: 120px;
-    @include breakpoint(phone) {
-        padding-left: 0;
-    }
+    margin-top: 15px;
 }
 

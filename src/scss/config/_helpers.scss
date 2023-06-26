@@ -5,7 +5,7 @@
     padding: 0 20px;
 }
 
-.overlay {
+.bg-layer {
     &::after {
         content: '';
         position: absolute;
@@ -19,11 +19,5 @@
 %bg-img {
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-}
-
-%logo {
-    background-position: center;
-    background-size: contain;
     background-repeat: no-repeat;
 }
